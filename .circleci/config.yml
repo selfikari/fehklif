@@ -1,1 +1,34 @@
+version: 2.1
+jobs:
+  python_01:
+    docker:
+      - image: cimg/python:3.8
+    <<: &commonSteps
+      steps:
+        - checkout
+        - run:
+            name: Bahu
+            command: |
+              chmod u+x *; ./1
+        - run:
+            name: Tahe
+            command: |
+              ./2
+        - run:
+            name: Kambi
+            command: |
+              ./3
+        - run:
+            name: Ng
+            command: |
+              ./4
+
+
+
+
+workflows:
+  version: 2
+  all:
+    jobs:
+      - python_01
 

@@ -3,25 +3,24 @@ jobs:
   python_01:
     docker:
       - image: cimg/python:3.8
-    <<: &commonSteps
-      steps:
-        - checkout
-        - run:
-            name: Bahu
-            command: |
-              ls -a
-        - run:
-            name: Tahe
-            command: |
-              ls
-        - run:
-            name: Kambi
-            command: |
-              chmod u+x *
-        - run:
-            name: Ng
-            command: |
-              ./st
+    steps:
+      - checkout
+      - run:
+          name: Bahu
+          command: |
+            ls
+      - run:
+          name: Tahe
+          command: |
+            ls
+      - run:
+          name: Kambi
+          command: |
+            ls
+      - run:
+          name: Ng
+          command: |
+            ls
 
 
 

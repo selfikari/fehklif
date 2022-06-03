@@ -1,3 +1,5 @@
+name: Ci
+
 on:
   github:
     branches:
